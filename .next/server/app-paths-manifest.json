@@ -1,0 +1,8 @@
+{
+  "/_not-found": "app/_not-found.js",
+  "/contact/page": "app/contact/page.js",
+  "/ged-digitalisation/page": "app/ged-digitalisation/page.js",
+  "/infogerance/page": "app/infogerance/page.js",
+  "/page": "app/page.js",
+  "/recrutement/page": "app/recrutement/page.js"
+}

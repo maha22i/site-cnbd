@@ -1,26 +1,63 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 255, 255, 255;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+/* Améliorations page d'accueil */
+@layer components {
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .home-section-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  @media (min-width: 768px) {
+    .home-section-title {
+      font-size: 2rem;
+    }
+  }
+  .home-card {
+    border-radius: 1.25rem;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+    border: 1px solid #f3f4f6;
+    transition: box-shadow 0.2s;
+    background: #fff;
+  }
+  .home-card:hover {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px);}
+  to { opacity: 1; transform: none; }
+}
+.animate-fade-in {
+  animation: fadeIn 0.8s both;
+}
+.animate-fade-up {
+  animation: fadeUp 1s both;
 }
