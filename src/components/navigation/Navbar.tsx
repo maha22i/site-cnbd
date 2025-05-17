@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Bars3Icon, XMarkIcon, PhoneIcon } from '@heroicons/react/24/outline';
 import DropdownMenu from './DropdownMenu';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 
 interface SubMenuItem {
   label: string;
@@ -35,12 +35,12 @@ const navItems: NavItem[] = [
       },
       { 
         label: 'Téléphonie', 
-        href: '/solutions/telephonie',
-        subItems: [
-          { label: 'Téléphonie d\'entreprise', href: '/solutions/telephonie/entreprise' },
-          { label: 'Téléphonie hébergée', href: '/solutions/telephonie/hebergee' },
-          { label: 'Communication unifiée', href: '/solutions/telephonie/communication-unifiee' },
-        ]
+        href: '/telephonie',
+        // subItems: [
+        //   { label: 'Téléphonie d\'entreprise', href: '/telephonie/entreprise' },
+        //   { label: 'Téléphonie hébergée', href: '/telephonie/hebergee' },
+        //   { label: 'Communication unifiée', href: '/telephonie/communication-unifiee' },
+        // ]
       },
       { 
         label: 'Informatique', 
@@ -49,7 +49,6 @@ const navItems: NavItem[] = [
           { label: 'Poste informatique', href: '/solutions/informatique/poste' },
           { label: 'Serveur et réseau', href: '/solutions/informatique/serveur-reseau' },
           { label: 'Hébergement', href: '/solutions/informatique/hebergement' },
-          { label: 'Messagerie', href: '/solutions/informatique/messagerie' },
           { label: 'Sauvegarde & sécurité', href: '/solutions/informatique/sauvegarde-securite' },
         ]
       },
@@ -68,7 +67,6 @@ const navItems: NavItem[] = [
     href: '/services',
     subItems: [
       { label: 'Audits & conseils', href: '/services/audits-conseils' },
-      { label: 'Cybersécurité', href: '/services/cybersecurite' },
       { label: 'Financement', href: '/services/financement' },
       { label: 'Services après vente & maintenance', href: '/services/sav-maintenance' },
     ] 
@@ -84,6 +82,7 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuVisible, setIsMobileMenuVisible] = useState(false);
   const pathname = usePathname();
+  const router = useRouter();
 
   // Fermeture du menu quand on clique en dehors
   useEffect(() => {
@@ -164,6 +163,13 @@ export default function Navbar() {
     setActiveSubDropdown(null);
   };
 
+  // Fonction pour rediriger vers la page téléphonie
+  const handleTelephoniePage = () => {
+    router.push('/telephonie');
+    setIsMenuOpen(false);
+    handleCloseAllDropdowns();
+  };
+
   const phoneNumber = "+33667360280";
   
   return (
@@ -205,7 +211,7 @@ export default function Navbar() {
                         ? 'text-cnbd-red bg-gray-50' 
                         : 'text-gray-700 hover:text-cnbd-red hover:bg-gray-50'
                       }`}
-                    onClick={() => handleDropdownToggle(item.label)}
+                    onClick={() => item.label === 'Téléphonie' ? handleTelephoniePage() : handleDropdownToggle(item.label)}
                     onMouseEnter={() => handleDropdownEnter(item.label)}
                   >
                     <span className="relative">
@@ -372,7 +378,7 @@ export default function Navbar() {
                     <button
                       className={`w-full flex justify-between items-center px-4 py-3.5 text-base font-medium transition-all duration-200
                         ${activeDropdown === item.label ? 'text-cnbd-red' : 'text-gray-800'}`}
-                      onClick={() => handleDropdownToggle(item.label)}
+                      onClick={() => item.label === 'Téléphonie' ? handleTelephoniePage() : handleDropdownToggle(item.label)}
                     >
                       {item.label}
                       <span className={`transition-transform duration-200 text-gray-400 ${
@@ -397,7 +403,7 @@ export default function Navbar() {
                                 <button
                                   className={`w-full flex justify-between items-center px-4 py-2.5 text-sm transition-all duration-200
                                     ${activeSubDropdown === subItem.label ? 'text-cnbd-red font-medium' : 'text-gray-700'}`}
-                                  onClick={() => handleSubDropdownToggle(subItem.label)}
+                                  onClick={(e) => handleSubDropdownToggle(subItem.label, e)}
                                 >
                                   {subItem.label}
                                   <span className={`transition-transform duration-200 text-gray-400 ${

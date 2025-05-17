@@ -58,7 +58,7 @@ export default function ContactPage() {
                   </div>
                 </li>
                 <li className="flex items-start gap-4">
-                  <EnvelopeIcon className="w-6 h-6 text-cnbd-red flex-shrink-0 mt-1" />
+                  <EnvelopeIcon className="w-6 h-6 text-cnbd-red flex-shrink-0 mt-1" />  
                   <div>
                     <span className="font-semibold block mb-1">Email</span>
                     <a href="mailto:fguerlin@cnbd.fr" className="text-cnbd-red hover:underline">fguerlin@cnbd.fr</a>

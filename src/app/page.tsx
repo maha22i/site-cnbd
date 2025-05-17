@@ -212,7 +212,7 @@ const features = [
 const solutionsExpertises = [
   { title: 'GED & Digitalisation', icon: '📄', href: '/solutions/ged-digitalisation', desc: 'Gestion électronique de documents, dématérialisation et automatisation.' },
   { title: 'Infogérance', icon: '🖥️', href: '/solutions/infogerance', desc: 'Gestion complète ou partielle de votre système d\'information.' },
-  { title: 'Téléphonie', icon: '📞', href: '/solutions/telephonie', desc: 'Téléphonie d\'entreprise, hébergée, communication unifiée.' },
+  { title: 'Téléphonie', icon: '📞', href: '/telephonie', desc: 'Téléphonie d\'entreprise, hébergée, communication unifiée.' },
   { title: 'Informatique', icon: '💻', href: '/solutions/informatique', desc: 'Postes, serveurs, réseau, hébergement, messagerie, sécurité.' },
   { title: 'Bureautique', icon: '🖨️', href: '/solutions/bureautique', desc: 'Impression, écrans interactifs, solutions bureautiques.' },
   { title: 'Cybersécurité', icon: '🛡️', href: '/services/cybersecurite', desc: 'Audit, protection, supervision et gestion des risques.' },
