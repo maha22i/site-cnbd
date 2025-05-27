@@ -52,11 +52,11 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <Link href="/" className="inline-block mb-4">
               <Image
-                src="/logo-cnbd.png"
+                src="/cnbd.jpg"
                 alt="CNBD Logo"
-                width={150}
-                height={50}
-                className="object-contain h-12 w-auto"
+                width={450}
+                height={80}
+                className="object-contain h-16 w-auto"
               />
             </Link>
             <p className="text-gray-400 mb-4 max-w-md">

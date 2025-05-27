@@ -1,1 +1,21 @@
-self.__BUILD_MANIFEST={polyfillFiles:["static/chunks/polyfills-c67a75d1b6f99dc8.js"],devFiles:[],ampDevFiles:[],lowPriorityFiles:["static/seq2ZR4W1-cEEywHxGpou/_buildManifest.js","static/seq2ZR4W1-cEEywHxGpou/_ssgManifest.js"],rootMainFiles:["static/chunks/webpack-2335202608315475.js","static/chunks/fd9d1056-05ac5a1ec46d0cfa.js","static/chunks/938-91e2896e39547f6c.js","static/chunks/main-app-a643ac93eaf51ceb.js"],pages:{"/_app":["static/chunks/webpack-2335202608315475.js","static/chunks/framework-c5181c9431ddc45b.js","static/chunks/main-c05a1ad8a4e68664.js","static/chunks/pages/_app-98cb51ec6f9f135f.js"],"/_error":["static/chunks/webpack-2335202608315475.js","static/chunks/framework-c5181c9431ddc45b.js","static/chunks/main-c05a1ad8a4e68664.js","static/chunks/pages/_error-e87e5963ec1b8011.js"]},ampFirstPages:[]};
+self.__BUILD_MANIFEST = {
+  "polyfillFiles": [
+    "static/chunks/polyfills.js"
+  ],
+  "devFiles": [],
+  "ampDevFiles": [],
+  "lowPriorityFiles": [],
+  "rootMainFiles": [
+    "static/chunks/webpack.js",
+    "static/chunks/main-app.js"
+  ],
+  "pages": {
+    "/_app": []
+  },
+  "ampFirstPages": []
+};
+self.__BUILD_MANIFEST.lowPriorityFiles = [
+"/static/" + process.env.__NEXT_BUILD_ID + "/_buildManifest.js",
+,"/static/" + process.env.__NEXT_BUILD_ID + "/_ssgManifest.js",
+
+];

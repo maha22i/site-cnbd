@@ -1,20 +1,6 @@
 {
-  "/_not-found": "app/_not-found.js",
-  "/contact/page": "app/contact/page.js",
-  "/ged-digitalisation/page": "app/ged-digitalisation/page.js",
-  "/page": "app/page.js",
-  "/infogerance/page": "app/infogerance/page.js",
-  "/services/audits-conseils/page": "app/services/audits-conseils/page.js",
-  "/recrutement/page": "app/recrutement/page.js",
-  "/services/financement/page": "app/services/financement/page.js",
-  "/services/page": "app/services/page.js",
-  "/services/sav-maintenance/page": "app/services/sav-maintenance/page.js",
-  "/solutions/bureautique/ecrans-interactifs/page": "app/solutions/bureautique/ecrans-interactifs/page.js",
-  "/solutions/bureautique/impression/page": "app/solutions/bureautique/impression/page.js",
-  "/solutions/bureautique/page": "app/solutions/bureautique/page.js",
-  "/solutions/informatique/hebergement/page": "app/solutions/informatique/hebergement/page.js",
-  "/solutions/informatique/poste/page": "app/solutions/informatique/poste/page.js",
-  "/solutions/informatique/sauvegarde-securite/page": "app/solutions/informatique/sauvegarde-securite/page.js",
-  "/solutions/informatique/serveur-reseau/page": "app/solutions/informatique/serveur-reseau/page.js",
-  "/telephonie/page": "app/telephonie/page.js"
+  "/[locale]/infogerance/page": "app/[locale]/infogerance/page.js",
+  "/[locale]/page": "app/[locale]/page.js",
+  "/[locale]/contact/page": "app/[locale]/contact/page.js",
+  "/[locale]/recrutement/page": "app/[locale]/recrutement/page.js"
 }

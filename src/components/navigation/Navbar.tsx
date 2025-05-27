@@ -2,10 +2,11 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
-import { Bars3Icon, XMarkIcon, PhoneIcon } from '@heroicons/react/24/outline';
+import { PhoneIcon } from '@heroicons/react/24/outline';
 import DropdownMenu from './DropdownMenu';
-import { usePathname, useRouter } from 'next/navigation';
+import LanguageToggle from './LanguageToggle';
+import { useTranslations } from 'next-intl';
+import { Link, usePathname, useRouter } from '../../i18n/navigation';
 
 interface SubMenuItem {
   label: string;
@@ -19,63 +20,8 @@ interface NavItem {
   subItems?: SubMenuItem[];
 }
 
-const navItems: NavItem[] = [
-  { label: 'Accueil', href: '/' },
-  { 
-    label: 'Solutions proposées', 
-    href: '/solutions',
-    subItems: [
-      { 
-        label: 'GED et digitalisation', 
-        href: '/ged-digitalisation',
-      },
-      { 
-        label: 'Infogérance', 
-        href: '/infogerance',
-      },
-      { 
-        label: 'Téléphonie', 
-        href: '/telephonie',
-        // subItems: [
-        //   { label: 'Téléphonie d\'entreprise', href: '/telephonie/entreprise' },
-        //   { label: 'Téléphonie hébergée', href: '/telephonie/hebergee' },
-        //   { label: 'Communication unifiée', href: '/telephonie/communication-unifiee' },
-        // ]
-      },
-      { 
-        label: 'Informatique', 
-        href: '/solutions/informatique',
-        subItems: [
-          { label: 'Poste informatique', href: '/solutions/informatique/poste' },
-          { label: 'Serveur et réseau', href: '/solutions/informatique/serveur-reseau' },
-          { label: 'Hébergement', href: '/solutions/informatique/hebergement' },
-          { label: 'Sauvegarde & sécurité', href: '/solutions/informatique/sauvegarde-securite' },
-        ]
-      },
-      { 
-        label: 'Bureautique', 
-        href: '/solutions/bureautique',
-        subItems: [
-          { label: 'Impression', href: '/solutions/bureautique/impression' },
-          { label: 'Écrans interactifs', href: '/solutions/bureautique/ecrans-interactifs' },
-        ]
-      },
-    ] 
-  },
-  { 
-    label: 'Nos services', 
-    href: '/services',
-    subItems: [
-      { label: 'Audits & conseils', href: '/services/audits-conseils' },
-      { label: 'Financement', href: '/services/financement' },
-      { label: 'Services après vente & maintenance', href: '/services/sav-maintenance' },
-    ] 
-  },
-  { label: 'Recrutement', href: '/recrutement' },
-  { label: 'Contact', href: '/contact' },
-];
-
 export default function Navbar() {
+  const t = useTranslations();
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [activeSubDropdown, setActiveSubDropdown] = useState<string | null>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -83,6 +29,56 @@ export default function Navbar() {
   const [isMobileMenuVisible, setIsMobileMenuVisible] = useState(false);
   const pathname = usePathname();
   const router = useRouter();
+
+  const navItems: NavItem[] = [
+    { label: t('navigation.home'), href: '/' },
+    { 
+      label: t('navigation.solutions'), 
+      href: '/solutions',
+      subItems: [
+        { 
+          label: t('solutions.ged'), 
+          href: '/ged-digitalisation',
+        },
+        { 
+          label: t('solutions.infogerance'), 
+          href: '/infogerance',
+        },
+        { 
+          label: t('solutions.telephonie'), 
+          href: '/telephonie',
+        },
+        { 
+          label: t('solutions.informatique'), 
+          href: '/solutions/informatique',
+          subItems: [
+            { label: t('informatique.poste'), href: '/solutions/informatique/poste' },
+            { label: 'Hébergement', href: '/solutions/informatique/hebergement' },
+            { label: 'Sauvegarde & Sécurité', href: '/solutions/informatique/sauvegarde-securite' },
+          ]
+        },
+        { 
+          label: t('solutions.bureautique'), 
+          href: '/solutions/bureautique',
+          subItems: [
+            { label: 'Impression', href: '/solutions/bureautique/impression' },
+            { label: 'Écrans Interactifs', href: '/solutions/bureautique/ecrans-interactifs' },
+          ]
+        },
+      ] 
+    },
+    { 
+      label: t('navigation.services'), 
+      href: '/services',
+      subItems: [
+        { label: t('services.audits.title.part1') + ' ' + t('services.audits.title.part2'), href: '/services/audits-conseils' },
+        { label: t('services.financement'), href: '/services/financement' },
+        { label: t('services.sav'), href: '/services/sav-maintenance' },
+      ] 
+    },
+    { label: t('navigation.recruitment'), href: '/recrutement' },
+    { label: t('navigation.contact'), href: '/contact' },
+  ];
 
   // Fermeture du menu quand on clique en dehors
   useEffect(() => {
@@ -211,7 +207,7 @@ export default function Navbar() {
                         ? 'text-cnbd-red bg-gray-50' 
                         : 'text-gray-700 hover:text-cnbd-red hover:bg-gray-50'
                       }`}
-                    onClick={() => item.label === 'Téléphonie' ? handleTelephoniePage() : handleDropdownToggle(item.label)}
+                    onClick={() => item.label === t('solutions.telephonie') ? handleTelephoniePage() : handleDropdownToggle(item.label)}
                     onMouseEnter={() => handleDropdownEnter(item.label)}
                   >
                     <span className="relative">
@@ -317,27 +313,29 @@ export default function Navbar() {
             ))}
           </nav>
 
-          {/* Phone Button */}
+          {/* Phone Button and Language Toggle */}
           <div className="hidden lg:flex items-center space-x-4">
+            <LanguageToggle />
             <a 
               href={`tel:${phoneNumber}`}
               className="inline-flex items-center px-3 py-1.5 border border-cnbd-red text-sm font-semibold rounded-full text-cnbd-red bg-white shadow hover:bg-cnbd-red hover:text-white transition-all duration-200 gap-2"
               style={{ letterSpacing: '0.01em' }}
             >
               <PhoneIcon className="h-4 w-4" />
-              <span className="tracking-wide">+33 6 67 36 02 80</span>
+              <span className="tracking-wide">{t('navigation.phone')}</span>
             </a>
           </div>
 
           {/* Mobile menu button and phone */}
           <div className="lg:hidden flex items-center space-x-2">
+            <LanguageToggle />
             <a 
               href={`tel:${phoneNumber}`}
               className="flex items-center px-3 py-1.5 rounded-full border border-cnbd-red bg-white text-cnbd-red text-xs font-semibold shadow hover:bg-cnbd-red hover:text-white transition-all duration-200 gap-1"
               aria-label="Appeler CNBD"
             >
               <PhoneIcon className="h-4 w-4" />
-              <span className="hidden xs:inline">+33 6 67 36 02 80</span>
+              <span className="hidden xs:inline">{t('navigation.phone')}</span>
             </a>
             <button
               type="button"
@@ -378,7 +376,7 @@ export default function Navbar() {
                     <button
                       className={`w-full flex justify-between items-center px-4 py-3.5 text-base font-medium transition-all duration-200
                         ${activeDropdown === item.label ? 'text-cnbd-red' : 'text-gray-800'}`}
-                      onClick={() => item.label === 'Téléphonie' ? handleTelephoniePage() : handleDropdownToggle(item.label)}
+                      onClick={() => item.label === t('solutions.telephonie') ? handleTelephoniePage() : handleDropdownToggle(item.label)}
                     >
                       {item.label}
                       <span className={`transition-transform duration-200 text-gray-400 ${
@@ -410,7 +408,7 @@ export default function Navbar() {
                                     activeSubDropdown === subItem.label ? 'rotate-180 text-cnbd-red' : ''
                                   }`}>
                                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7 7" />
                                     </svg>
                                   </span>
                                 </button>
