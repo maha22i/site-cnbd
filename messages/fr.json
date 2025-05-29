@@ -755,6 +755,17 @@
     "cta": {
       "title": "Prêt à moderniser votre infrastructure informatique?",
       "description": "Contactez-nous dès aujourd'hui pour discuter de vos besoins spécifiques et découvrir comment nos solutions peuvent aider votre entreprise."
+    },
+    "partners": {
+      "title": "Nos partenaires",
+      "subtitle": "Ils nous font confiance pour accompagner la transformation digitale de nos clients.",
+      "descriptions": {
+        "unyc": "Opérateur télécom et solutions de communication unifiée.",
+        "kyocera": "Constructeur d'imprimantes et solutions documentaires.",
+        "adalink": "Adalink est une entreprise de développement informatique, logiciel et services numériques.",
+        "canon": "Leader mondial de l'imagerie et impression professionnelle.",
+        "bmb": "Partenaire en solutions informatiques et bureautiques."
+      }
     }
   },
   "recruitment": {
@@ -813,7 +824,7 @@
     },
     "form": {
       "title": "Contactez-nous",
-      "description": "Une question, un projet, besoin d'un conseil ? Remplissez le formulaire, notre équipe vous répondra rapidement.",
+      "description": "Remplissez le formulaire, notre équipe vous répondra rapidement.",
       "lastname": "Nom",
       "lastname_placeholder": "Votre nom",
       "firstname": "Prénom",

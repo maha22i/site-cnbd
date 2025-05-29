@@ -17,28 +17,26 @@ const footerSections: FooterSection[] = [
   {
     title: 'CNBD',
     links: [
-      { label: 'Notre entreprise', href: '/entreprise' },
-      { label: 'Nos valeurs', href: '/entreprise/valeurs' },
-      { label: 'Notre équipe', href: '/entreprise/equipe' },
-      { label: 'Nous rejoindre', href: '/carriere' },
+      { label: 'Accueil', href: '/' },
+      { label: 'Nous rejoindre', href: '/recrutement' },
+      { label: 'Contact', href: '/contact' },
+    ],
+  },
+  {
+    title: 'Solutions',
+    links: [
+      { label: 'GED & Digitalisation', href: '/ged-digitalisation' },
+      { label: 'Infogérance', href: '/infogerance' },
+      { label: 'Téléphonie', href: '/telephonie' },
+      { label: 'Informatiques', href: '/solutions/informatique/poste' },
     ],
   },
   {
     title: 'Services',
     links: [
-      { label: 'Installation de réseaux', href: '/services/reseaux' },
-      { label: 'Maintenance informatique', href: '/services/maintenance' },
-      { label: 'Conseil et audit', href: '/services/conseil' },
-      { label: 'Infogérance', href: '/services/infogerance' },
-    ],
-  },
-  {
-    title: 'Produits',
-    links: [
-      { label: 'Ordinateurs', href: '/produits/ordinateurs' },
-      { label: 'Périphériques', href: '/produits/peripheriques' },
-      { label: 'Logiciels', href: '/produits/logiciels' },
-      { label: 'Solutions d\'impression', href: '/produits/impression' },
+      { label: 'Audits & Conseils', href: '/services/audits-conseils' },
+      { label: 'SAV & Maintenance', href: '/services/sav-maintenance' },
+      { label: 'Financement', href: '/services/financement' },
     ],
   },
 ];
@@ -108,7 +106,7 @@ export default function Footer() {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div>
-              <h3 className="text-lg font-bold mb-4">Contact</h3>
+              <h3 className="text-lg font-bold mb-4">Adresse</h3>
               <p className="text-gray-400">
               64, allée de la main ferme <br />
                 93320 Les Pavillons sous Bois, FRANCE
@@ -130,7 +128,7 @@ export default function Footer() {
               <h3 className="text-lg font-bold mb-4">Email</h3>
               <p className="text-gray-400">
                 <a href="mailto:contact@cnbd.fr" className="hover:text-white transition-colors duration-200">
-                  contact@cnbd.fr
+                  support@cnbd.fr
                 </a>
               </p>
             </div>

@@ -281,6 +281,48 @@ export default function HomeContent() {
         </div>
       </section>
 
+      {/* Nos partenaires Section */}
+      <section className="py-10 bg-white" id="partenaires">
+        <div className="container mx-auto px-6 max-w-6xl">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-cnbd-red via-red-600 to-cnbd-red bg-clip-text text-transparent mb-4" data-aos="fade-up">
+              {t('home.partners.title')}
+            </h2>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+              {t('home.partners.subtitle')}
+            </p>
+            <div className="w-24 h-1 bg-gradient-to-r from-cnbd-red to-red-600 mx-auto rounded-full mt-6" data-aos="fade-up" data-aos-delay="200"></div>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 items-center justify-center">
+            {[
+              { key: 'unyc', src: '/partenaire/unyc.png', alt: 'Unyc' },
+              { key: 'kyocera', src: '/partenaire/kyocera.png', alt: 'Kyocera' },
+              { key: 'adalink', src: '/partenaire/adalink.png', alt: 'Adalink' },
+              { key: 'canon', src: '/partenaire/canon.png', alt: 'Canon' },
+              { key: 'bmb', src: '/partenaire/bmb.png', alt: 'BMB' },
+            ].map((partner, i) => (
+              <div
+                key={partner.alt}
+                className="flex flex-col items-center justify-center p-6 bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 group border border-gray-100 hover:border-cnbd-red/30"
+                data-aos="zoom-in"
+                data-aos-delay={i * 100}
+              >
+                <Image
+                  src={partner.src}
+                  alt={partner.alt}
+                  width={140}
+                  height={80}
+                  className="object-contain transition-all duration-300 h-20 w-auto mx-auto"
+                />
+                <span className="mt-4 text-xs text-gray-500 text-center min-h-[40px]">
+                  {t('home.partners.descriptions.' + partner.key)}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Contact CTA */}
       <section className="py-20 bg-gradient-to-r from-gray-900 via-cnbd-black to-gray-900 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg fill=%22none%22 fill-rule=%22evenodd%22%3E%3Cg fill=%22%23ffffff%22 fill-opacity=%220.05%22%3E%3Ccircle cx=%227%22 cy=%227%22 r=%227%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>

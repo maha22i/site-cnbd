@@ -4,7 +4,6 @@ import { useLocale } from 'next-intl';
 import { useRouter, usePathname } from '../../i18n/navigation';
 import { useState, useTransition, useRef, useEffect } from 'react';
 import Image from 'next/image';
-import { GlobeAltIcon } from '@heroicons/react/24/outline';
 
 type Locale = 'fr' | 'en';
 
@@ -25,7 +24,6 @@ export default function LanguageToggle() {
   const pathname = usePathname();
   const [isPending, startTransition] = useTransition();
   const [isOpen, setIsOpen] = useState(false);
-  const [showTooltip, setShowTooltip] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
   // Close dropdown on outside click
@@ -57,47 +55,30 @@ export default function LanguageToggle() {
 
   return (
     <div ref={ref} className="relative flex items-center ml-2">
-      <div className="relative">
-        <button
-          type="button"
-          aria-label={locale === 'fr' ? 'Changer la langue en anglais' : 'Changer la langue en français'}
-          className={`
-            flex items-center justify-center
-            w-9 h-9 rounded-full
-            border border-gray-200 bg-white shadow-sm
-            hover:shadow-md hover:border-gray-300
-            transition-all duration-200
-            focus:outline-none focus:ring-2 focus:ring-cnbd-red/40
-            ${isPending ? 'opacity-60 cursor-not-allowed' : ''}
-          `}
-          onClick={() => setIsOpen((v) => !v)}
-          onMouseEnter={() => setShowTooltip(true)}
-          onMouseLeave={() => setShowTooltip(false)}
-          disabled={isPending}
-        >
-          {/* Globe icon in background */}
-          <span className="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <GlobeAltIcon className="w-5 h-5 text-gray-300 opacity-60" />
-          </span>
-          {/* Flag in foreground */}
-          <span className="relative z-10">
-            <Image
-              src={FLAGS[locale].src}
-              alt={FLAGS[locale].alt}
-              width={28}
-              height={20}
-              className="rounded-sm object-cover"
-              priority
-            />
-          </span>
-        </button>
-        {/* Tooltip */}
-        {showTooltip && !isOpen && (
-          <div className="absolute left-1/2 -translate-x-1/2 top-11 px-3 py-1.5 rounded-md bg-black/90 text-white text-xs shadow-lg whitespace-nowrap z-50 animate-fade-in">
-            Changer la langue
-          </div>
-        )}
-      </div>
+      <button
+        type="button"
+        aria-label={locale === 'fr' ? 'Changer la langue en anglais' : 'Changer la langue en français'}
+        className={`
+          flex items-center justify-center
+          w-9 h-9 rounded-full
+          border border-gray-200 bg-white shadow-sm
+          hover:shadow-md hover:border-gray-300
+          transition-all duration-200
+          focus:outline-none focus:ring-2 focus:ring-cnbd-red/40
+          ${isPending ? 'opacity-60 cursor-not-allowed' : ''}
+        `}
+        onClick={() => setIsOpen((v) => !v)}
+        disabled={isPending}
+      >
+        <Image
+          src={FLAGS[locale].src}
+          alt={FLAGS[locale].alt}
+          width={28}
+          height={20}
+          className="rounded-sm object-cover"
+          priority
+        />
+      </button>
       {/* Dropdown */}
       <div
         className={`

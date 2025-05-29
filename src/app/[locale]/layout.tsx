@@ -7,6 +7,7 @@ import '../globals.css';
 import Navbar from '../../components/navigation/Navbar';
 import Footer from '../../components/navigation/Footer';
 import BackToTopButton from '../../components/BackToTopButton';
+import WhatsAppButton from '../../components/WhatsAppButton';
 import { locales } from '../../i18n/config';
 import 'aos/dist/aos.css';
 
@@ -50,6 +51,7 @@ export default async function LocaleLayout({
           </main>
           <Footer />
           <BackToTopButton />
+          <WhatsAppButton />
         </NextIntlClientProvider>
       </body>
     </html>

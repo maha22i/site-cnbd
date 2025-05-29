@@ -736,6 +736,17 @@
     "cta": {
       "title": "Ready to modernize your IT infrastructure?",
       "description": "Contact us today to discuss your specific needs and discover how our solutions can help your business."
+    },
+    "partners": {
+      "title": "Our Partners",
+      "subtitle": "They trust us to support our clients' digital transformation.",
+      "descriptions": {
+        "unyc": "Telecom operator and unified communications solutions.",
+        "kyocera": "Manufacturer of printers and document solutions.",
+        "adalink": "Adalink is a company specialized in software development and digital services.",
+        "canon": "World leader in imaging and professional printing.",
+        "bmb": "Partner in IT and office solutions."
+      }
     }
   },
   "recruitment": {
