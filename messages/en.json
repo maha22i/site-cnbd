@@ -654,13 +654,15 @@
         "imageAlt": "CNBD Logo"
       },
       "whyUs": {
+        "title": "Why choose us",
+        "description": "CNBD offers you complete peace of mind with our maintenance and after-sales service solutions",
         "security": {
           "title": "Security and peace of mind",
-          "description": "You benefit from regular monitoring and fast response in case of problems."
+          "description": "You benefit from regular monitoring and rapid response in case of problems."
         },
         "optimization": {
           "title": "Investment optimization",
-          "description": "Well-maintained equipment lasts longer and maintains performance."
+          "description": "Well-maintained equipment lasts longer and remains efficient."
         },
         "simplicity": {
           "title": "Simplicity",
@@ -784,6 +786,7 @@
   "contact": {
     "info": {
       "title": "Our contact information",
+      "subtitle": "We are at your disposal to answer all your questions",
       "address": {
         "label": "Address"
       },
@@ -1390,6 +1393,22 @@
           "description": "We adapt our offers to your needs: one-time maintenance, annual contract, or all-inclusive package. You choose the service level that corresponds to your organization and requirements."
         }
       ]
+    },
+    "whyUs": {
+      "title": "Why choose us",
+      "description": "CNBD offers you complete peace of mind with our maintenance and after-sales service solutions",
+      "security": {
+        "title": "Security and peace of mind",
+        "description": "You benefit from regular monitoring and rapid response in case of problems."
+      },
+      "optimization": {
+        "title": "Investment optimization",
+        "description": "Well-maintained equipment lasts longer and remains efficient."
+      },
+      "simplicity": {
+        "title": "Simplicity",
+        "description": "A single point of contact for all your maintenance and technical support needs."
+      }
     },
     "services": {
       "importance": {

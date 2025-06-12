@@ -96,32 +96,35 @@ export default function GedDigitalisationClient() {
                   <div className="absolute inset-0 bg-gradient-to-tr from-cnbd-red/30 to-transparent opacity-60"></div>
                 </div>
                 
-                <div className="absolute -right-10 top-1/2 transform -translate-y-1/2 bg-white rounded-2xl shadow-xl p-4 backdrop-blur">
-                  <div className="flex items-center gap-3">
-                    <div className="bg-cnbd-red/10 p-2 rounded-lg">
-                      <svg className="w-8 h-8 text-cnbd-red" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M9 12l2 2 4-4"></path>
-                        <path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9c2.5 0 4.74 1.02 6.36 2.64"></path>
-                      </svg>
+                <div className="absolute -right-10 top-1/2 transform -translate-y-1/2 bg-white rounded-2xl shadow-xl p-5 backdrop-blur border border-gray-100 hover:shadow-2xl transition-all duration-300">
+                  <div className="flex items-center gap-4">
+                    <div className="bg-gradient-to-br from-cnbd-red/20 to-cnbd-red/5 p-3 rounded-xl shadow-inner">
+                      <Image 
+                        src="/icone/numeriser-le-document.png" 
+                        alt="Numériser document" 
+                        width={48}
+                        height={48}
+                        className="w-12 h-12 object-contain"
+                      />
                     </div>
                     <div>
-                      <div className="font-bold">{t('badges.security.title')}</div>
-                      <div className="text-sm text-gray-500">{t('badges.security.subtitle')}</div>
+                      <div className="font-bold text-lg text-cnbd-black">{t('badges.security.title')}</div>
+                      <div className="text-gray-600">{t('badges.security.subtitle')}</div>
                     </div>
                   </div>
                 </div>
                 
-                <div className="absolute -left-10 bottom-20 bg-white rounded-2xl shadow-xl p-4 backdrop-blur">
-                  <div className="flex items-center gap-3">
-                    <div className="bg-cnbd-red/10 p-2 rounded-lg">
-                      <svg className="w-8 h-8 text-cnbd-red" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <div className="absolute -left-10 bottom-20 bg-white rounded-2xl shadow-xl p-5 backdrop-blur border border-gray-100 hover:shadow-2xl transition-all duration-300">
+                  <div className="flex items-center gap-4">
+                    <div className="bg-gradient-to-br from-cnbd-red/20 to-cnbd-red/5 p-3 rounded-xl shadow-inner">
+                      <svg className="w-12 h-12 text-cnbd-red" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <circle cx="12" cy="12" r="10"></circle>
                         <polyline points="12,6 12,12 16,14"></polyline>
                       </svg>
                     </div>
                     <div>
-                      <div className="font-bold">{t('badges.time.title')}</div>
-                      <div className="text-sm text-gray-500">{t('badges.time.subtitle')}</div>
+                      <div className="font-bold text-lg text-cnbd-black">{t('badges.time.title')}</div>
+                      <div className="text-gray-600">{t('badges.time.subtitle')}</div>
                     </div>
                   </div>
                 </div>
@@ -174,51 +177,66 @@ export default function GedDigitalisationClient() {
           <div id="avantages" className="bg-white rounded-2xl shadow-xl p-8" data-aos="fade-up">
             <h2 className="text-2xl font-bold text-cnbd-red mb-3">{t('sections.benefits.title')}</h2>
             <ul className="grid md:grid-cols-3 gap-6 text-gray-800">
-              {['time', 'security', 'compliance', 'cost', 'mobility', 'collaboration'].map((key) => (
-                <li key={key} className="flex flex-col items-center text-center gap-2">
-                  <span className="inline-flex items-center justify-center bg-cnbd-red/10 text-cnbd-red rounded-full w-14 h-14 mb-2">
+              {(['time', 'security', 'compliance', 'cost', 'mobility', 'collaboration'] as const).map((key) => (
+                <li key={key} className="flex flex-col items-center text-center gap-3 p-4 hover:bg-white rounded-2xl transition-all duration-300 hover:shadow-lg">
+                  <span className="inline-flex items-center justify-center bg-gradient-to-br from-cnbd-red/20 to-cnbd-red/5 text-cnbd-red rounded-xl w-20 h-20 mb-3 shadow-inner">
                     {key === 'time' && (
-                      <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <polyline points="12,6 12,12 16,14"></polyline>
-                      </svg>
+                      <Image 
+                        src="/icone/gain-temps.png" 
+                        alt="Gain de temps" 
+                        width={48}
+                        height={48}
+                        className="w-12 h-12 object-contain"
+                      />
                     )}
                     {key === 'security' && (
-                      <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                      </svg>
+                     <Image 
+                        src="/icone/securite.png" 
+                        alt="securite" 
+                        width={48}
+                        height={48}
+                        className="w-12 h-12 object-contain"
+                      />
                     )}
                     {key === 'compliance' && (
-                      <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                        <polyline points="14,2 14,8 20,8"></polyline>
-                        <line x1="16" y1="13" x2="8" y2="13"></line>
-                        <line x1="16" y1="17" x2="8" y2="17"></line>
-                        <polyline points="10,9 9,9 8,9"></polyline>
-                      </svg>
+                      <Image 
+                      src="/icone/conformite.png" 
+                      alt="conformite" 
+                      width={48}
+                      height={48}
+                      className="w-12 h-12 object-contain"
+                    />
                     )}
                     {key === 'cost' && (
-                      <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <line x1="12" y1="1" x2="12" y2="23"></line>
-                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                      </svg>
+                       <Image 
+                       src="/icone/perte.png" 
+                       alt="perte" 
+                       width={48}
+                       height={48}
+                       className="w-12 h-12 object-contain"
+                     />
                     )}
                     {key === 'mobility' && (
-                      <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                        <line x1="8" y1="21" x2="16" y2="21"></line>
-                        <line x1="12" y1="17" x2="12" y2="21"></line>
-                      </svg>
+                       <Image 
+                       src="/icone/la-flexibilite.png" 
+                       alt="flexibilite" 
+                       width={48}
+                       height={48}
+                       className="w-12 h-12 object-contain"
+                     />
                     )}
                     {key === 'collaboration' && (
-                      <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                        <circle cx="12" cy="7" r="4"></circle>
-                      </svg>
+                     <Image 
+                     src="/icone/relation.png" 
+                     alt="relation" 
+                     width={48}
+                     height={48}
+                     className="w-12 h-12 object-contain"
+                   />
                     )}
                   </span>
-                  <span className="font-semibold">{t(`sections.benefits.items.${key}.title`)}</span>
-                  <span className="text-gray-600 text-sm">{t(`sections.benefits.items.${key}.description`)}</span>
+                  <span className="font-bold text-lg text-cnbd-black mb-1">{t(`sections.benefits.items.${key}.title`)}</span>
+                  <span className="text-gray-600 leading-relaxed">{t(`sections.benefits.items.${key}.description`)}</span>
                 </li>
               ))}
             </ul>
@@ -231,50 +249,63 @@ export default function GedDigitalisationClient() {
               {Array.from({ length: 7 }).map((_, i) => (
                 <li key={i} className="flex items-center gap-4">
                   <span className="inline-flex items-center justify-center bg-cnbd-red/10 text-cnbd-red rounded-full w-12 h-12">
-                    <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      {i === 0 && (
-                        <>
-                          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                          <polyline points="14,2 14,8 20,8"></polyline>
-                          <line x1="16" y1="13" x2="8" y2="13"></line>
-                          <line x1="16" y1="17" x2="8" y2="17"></line>
-                          <polyline points="10,9 9,9 8,9"></polyline>
-                        </>
-                      )}
-                      {i === 1 && (
-                        <>
-                          <circle cx="11" cy="11" r="8"></circle>
-                          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                        </>
-                      )}
-                      {i === 2 && (
-                        <>
-                          <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
-                          <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
-                        </>
-                      )}
-                      {i === 3 && (
-                        <>
-                          <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
-                          <path d="m7 11V7a5 5 0 0 1 10 0v4"></path>
-                        </>
-                      )}
-                      {i === 4 && (
-                        <>
-                          <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-                          <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-                        </>
-                      )}
-                      {i === 5 && (
-                        <path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"></path>
-                      )}
-                      {i === 6 && (
-                        <>
-                          <path d="M3 3v18h18"></path>
-                          <path d="m19 9-5 5-4-4-3 3"></path>
-                        </>
-                      )}
-                    </svg>
+                    {i === 0 ? (
+                      <Image 
+                        src="/icone/numeriser-le-document.png" 
+                        alt="Numériser document" 
+                        width={28}
+                        height={28}
+                        className="w-7 h-7 object-contain"
+                      />
+                    ) : i === 1 ? (
+                      <Image 
+                        src="/icone/controle-de-version.png" 
+                        alt="Controle de version" 
+                        width={28}
+                        height={28}
+                        className="w-7 h-7 object-contain"
+                      />
+                    ) : i === 2 ? (
+                      <Image 
+                        src="/icone/signature-numerique.png" 
+                        alt="Signature numérique" 
+                        width={28}
+                        height={28}
+                        className="w-7 h-7 object-contain"
+                      />
+                    ) : i === 3 ? (
+                      <Image 
+                        src="/icone/dm.png" 
+                        alt="partager le document" 
+                        width={28}
+                        height={28}
+                        className="w-7 h-7 object-contain"
+                      />
+                    ) : i === 4 ? (
+                      <Image 
+                        src="/icone/telephone-intelligent.png" 
+                        alt="Téléphone intelligent" 
+                        width={28}
+                        height={28}
+                        className="w-7 h-7 object-contain"
+                      />
+                    ) : i === 5 ? (
+                      <Image 
+                        src="/icone/archivage-des-donnees.png" 
+                        alt="Archivage des données" 
+                        width={28}
+                        height={28}
+                        className="w-7 h-7 object-contain"
+                      />
+                    ) : (
+                      <Image 
+                        src="/icone/tableau-de-bord.png" 
+                        alt="Tableau de bord" 
+                        width={28}
+                        height={28}
+                        className="w-7 h-7 object-contain"
+                      />
+                    )}
                   </span>
                   {t(`sections.features.items.${i}`)}
                 </li>

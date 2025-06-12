@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 
-const WHATSAPP_NUMBER = "33775840962"; // à adapter si besoin
+const WHATSAPP_NUMBER = "33667360280"; // à adapter si besoin
 const WHATSAPP_MESSAGE = encodeURIComponent("Bonjour, je souhaite avoir des informations sur vos services.");
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`;
 

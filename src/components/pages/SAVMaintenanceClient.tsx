@@ -56,8 +56,8 @@ export default function SAVMaintenanceClient() {
   
   const pourquoiNous = [
     {
-      title: t('whyUs.security.title', { defaultValue: 'Sécurité et tranquillité d\'esprit' }),
-      description: t('whyUs.security.description', { defaultValue: 'Vous bénéficiez d\'un suivi régulier et d\'une prise en charge rapide en cas de problème.' }),
+      title: t('whyUs.security.title'),
+      description: t('whyUs.security.description'),
       icon: (
         <svg className="w-8 h-8 text-cnbd-red" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
@@ -65,8 +65,8 @@ export default function SAVMaintenanceClient() {
       ),
     },
     {
-      title: t('whyUs.optimization.title', { defaultValue: 'Optimisation des investissements' }),
-      description: t('whyUs.optimization.description', { defaultValue: 'Un matériel bien entretenu dure plus longtemps et reste performant.' }),
+      title: t('whyUs.optimization.title'),
+      description: t('whyUs.optimization.description'),
       icon: (
         <svg className="w-8 h-8 text-cnbd-red" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
@@ -74,8 +74,8 @@ export default function SAVMaintenanceClient() {
       ),
     },
     {
-      title: t('whyUs.simplicity.title', { defaultValue: 'Simplicité' }),
-      description: t('whyUs.simplicity.description', { defaultValue: 'Un seul interlocuteur pour tous vos besoins de maintenance et de support technique.' }),
+      title: t('whyUs.simplicity.title'),
+      description: t('whyUs.simplicity.description'),
       icon: (
         <svg className="w-8 h-8 text-cnbd-red" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
@@ -237,6 +237,28 @@ export default function SAVMaintenanceClient() {
                </div>
                <h3 className="text-xl font-bold mb-4">{engagement.title}</h3>
                <p className="text-gray-700">{engagement.description}</p>
+             </div>
+           ))}
+         </div>
+       </section>
+
+       {/* Pourquoi nous choisir section */}
+       <section id="pourquoi-nous" className="container mx-auto px-4 max-w-5xl py-12">
+         <div className="text-center mb-16" data-aos="fade-up">
+           <h2 className="text-3xl md:text-4xl font-bold text-cnbd-red mb-4">{t('whyUs.title')}</h2>
+           <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+             {t('whyUs.description')}
+           </p>
+         </div>
+         
+         <div className="grid md:grid-cols-3 gap-8">
+           {pourquoiNous.map((item, index) => (
+             <div key={index} className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay={index * 100}>
+               <div className="bg-cnbd-red/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                 {item.icon}
+               </div>
+               <h3 className="text-xl font-bold mb-4">{item.title}</h3>
+               <p className="text-gray-700">{item.description}</p>
              </div>
            ))}
          </div>

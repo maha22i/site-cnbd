@@ -68,7 +68,7 @@ const HeroSlider = () => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
       setTimeout(() => setIsAnimating(false), 800);
     }
-  }, [isAnimating]);
+  }, [isAnimating, slides.length]);
 
   const prevSlide = useCallback(() => {
     if (!isAnimating) {
@@ -76,7 +76,7 @@ const HeroSlider = () => {
       setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
       setTimeout(() => setIsAnimating(false), 800);
     }
-  }, [isAnimating]);
+  }, [isAnimating, slides.length]);
 
   useEffect(() => {
     const timer = setInterval(nextSlide, 6000);

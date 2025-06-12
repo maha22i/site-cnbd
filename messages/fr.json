@@ -664,6 +664,8 @@
       }
     },
     "whyUs": {
+      "title": "Pourquoi nous choisir",
+      "description": "CNBD vous offre une tranquillité d'esprit totale avec nos solutions de maintenance et de service après-vente",
       "security": {
         "title": "Sécurité et tranquillité d'esprit",
         "description": "Vous bénéficiez d'un suivi régulier et d'une prise en charge rapide en cas de problème."
@@ -803,6 +805,7 @@
   "contact": {
     "info": {
       "title": "Nos coordonnées",
+      "subtitle": "Nous sommes à votre disposition pour répondre à toutes vos questions",
       "address": {
         "label": "Adresse"
       },
@@ -1535,10 +1538,21 @@
         }
       ]
     },
-    "importance": {
-      "title": "L'importance du SAV et de la maintenance pour votre entreprise",
-      "description": "Un équipement bien entretenu est la garantie d'une activité sereine et productive. Notre service après-vente et maintenance vous assure la longévité de vos investissements, la continuité de votre activité et la tranquillité d'esprit, tout en optimisant vos coûts d'exploitation.",
-      "imageAlt": "SAV et Maintenance"
+    "whyUs": {
+      "title": "Pourquoi nous choisir",
+      "description": "CNBD vous offre une tranquillité d'esprit totale avec nos solutions de maintenance et de service après-vente",
+      "security": {
+        "title": "Sécurité et tranquillité d'esprit",
+        "description": "Vous bénéficiez d'un suivi régulier et d'une prise en charge rapide en cas de problème."
+      },
+      "optimization": {
+        "title": "Optimisation des investissements",
+        "description": "Un matériel bien entretenu dure plus longtemps et reste performant."
+      },
+      "simplicity": {
+        "title": "Simplicité",
+        "description": "Un seul interlocuteur pour tous vos besoins de maintenance et de support technique."
+      }
     },
     "services": {
       "importance": {
@@ -1597,20 +1611,6 @@
         "title": "Un partenaire de confiance pour votre maintenance",
         "description": "CNBD vous accompagne au quotidien avec un support technique accessible par téléphone, email ou portail client. Notre engagement : vous offrir un service de proximité avec la réactivité d'une équipe dédiée.",
         "imageAlt": "Logo CNBD"
-      }
-    },
-    "whyUs": {
-      "security": {
-        "title": "Sécurité et tranquillité d'esprit",
-        "description": "Vous bénéficiez d'un suivi régulier et d'une prise en charge rapide en cas de problème."
-      },
-      "optimization": {
-        "title": "Optimisation des investissements",
-        "description": "Un matériel bien entretenu dure plus longtemps et reste performant."
-      },
-      "simplicity": {
-        "title": "Simplicité",
-        "description": "Un seul interlocuteur pour tous vos besoins de maintenance et de support technique."
       }
     },
     "cta": {

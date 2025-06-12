@@ -137,7 +137,7 @@ export default function PosteInformatiquePage() {
           </div>
         </section>
 
-        <section id="solutions" className="container mx-auto px-4 max-w-5xl flex flex-col gap-12 py-8 md:py-16">
+        <section id="solutions" className="container mx-auto px-4 max-w-5xl flex flex-col gap-12 py-8 md:py-4">
           {/* Types de postes informatiques */}
           <div className="bg-white rounded-2xl shadow-xl p-8 flex flex-col gap-8" data-aos="fade-right">
             <div className="flex flex-col md:flex-row gap-8 items-center">

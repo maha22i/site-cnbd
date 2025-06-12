@@ -107,9 +107,13 @@ export default function InfogeranceClient() {
               <div className="absolute -right-10 top-1/2 transform -translate-y-1/2 bg-white rounded-2xl shadow-xl p-4 backdrop-blur">
                 <div className="flex items-center gap-3">
                   <div className="bg-cnbd-red/10 p-2 rounded-lg">
-                    <svg className="w-8 h-8 text-cnbd-red" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                    </svg>
+                    <Image 
+                      src="/icone/securite.png" 
+                      alt="Sécurité" 
+                      width={32}
+                      height={32}
+                      className="w-8 h-8 object-contain"
+                    />
                   </div>
                   <div>
                     <div className="font-bold">{t('badges.security.title')}</div>
@@ -178,48 +182,52 @@ export default function InfogeranceClient() {
 
         {/* Les avantages de l'infogérance */}
         <div id="avantages" className="bg-white rounded-2xl shadow-xl p-8" data-aos="fade-up">
-          <h2 className="text-2xl font-bold text-cnbd-red mb-3">{t('sections.benefits.title')}</h2>
-          <ul className="grid md:grid-cols-3 gap-6 text-gray-800">
+          <h2 className="text-2xl font-bold text-cnbd-red mb-6">{t('sections.benefits.title')}</h2>
+          <ul className="grid md:grid-cols-3 gap-8 text-gray-800">
             {['security', 'availability', 'cost_control', 'expertise', 'serenity', 'scalability'].map((key) => (
-              <li key={key} className="flex flex-col items-center text-center gap-2">
-                <span className="inline-flex items-center justify-center bg-cnbd-red/10 text-cnbd-red rounded-full w-14 h-14 mb-2">
+              <li key={key} className="flex flex-col items-center text-center gap-3">
+                <span className="inline-flex items-center justify-center bg-cnbd-red/10 text-cnbd-red rounded-full w-20 h-20 mb-4">
                   {key === 'security' && (
-                    <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                    </svg>
+                    <Image 
+                      src="/icone/securite.png" 
+                      alt="Sécurité" 
+                      width={48}
+                      height={48}
+                      className="w-12 h-12 object-contain"
+                    />
                   )}
                   {key === 'availability' && (
-                    <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <svg className="w-12 h-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
                       <line x1="8" y1="21" x2="16" y2="21"></line>
                       <line x1="12" y1="17" x2="12" y2="21"></line>
                     </svg>
                   )}
                   {key === 'cost_control' && (
-                    <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <svg className="w-12 h-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <circle cx="12" cy="8" r="7"></circle>
                       <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
                     </svg>
                   )}
                   {key === 'expertise' && (
-                    <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <svg className="w-12 h-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <polygon points="14 2 18 6 7 17 3 17 3 13 14 2"></polygon>
                       <line x1="3" y1="22" x2="21" y2="22"></line>
                     </svg>
                   )}
                   {key === 'serenity' && (
-                    <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <svg className="w-12 h-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
                     </svg>
                   )}
                   {key === 'scalability' && (
-                    <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <svg className="w-12 h-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
                     </svg>
                   )}
                 </span>
-                <span className="font-semibold">{t(`sections.benefits.items.${key}.title`)}</span>
-                <span className="text-gray-600 text-sm">{t(`sections.benefits.items.${key}.description`)}</span>
+                <span className="font-semibold text-lg">{t(`sections.benefits.items.${key}.title`)}</span>
+                <span className="text-gray-600">{t(`sections.benefits.items.${key}.description`)}</span>
               </li>
             ))}
           </ul>
