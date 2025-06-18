@@ -124,11 +124,15 @@ export default function InfogeranceClient() {
               
               <div className="absolute -left-10 bottom-20 bg-white rounded-2xl shadow-xl p-4 backdrop-blur">
                 <div className="flex items-center gap-3">
-                  <div className="bg-cnbd-red/10 p-2 rounded-lg">
-                    <svg className="w-8 h-8 text-cnbd-red" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M13 2L3 14h9l-1 8L21 10h-9l1-8z"></path>
-                    </svg>
-                  </div>
+                <div className="bg-gradient-to-br from-cnbd-red/20 to-cnbd-red/5 p-3 rounded-xl shadow-inner">
+                      <Image 
+                        src="/icone/gain-temps.png" 
+                        alt="Numériser document" 
+                        width={48}
+                        height={48}
+                        className="w-12 h-12 object-contain"
+                      />
+                    </div>
                   <div>
                     <div className="font-bold">{t('badges.availability.title')}</div>
                     <div className="text-sm text-gray-500">{t('badges.availability.subtitle')}</div>
@@ -197,33 +201,49 @@ export default function InfogeranceClient() {
                     />
                   )}
                   {key === 'availability' && (
-                    <svg className="w-12 h-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                      <line x1="8" y1="21" x2="16" y2="21"></line>
-                      <line x1="12" y1="17" x2="12" y2="21"></line>
-                    </svg>
+                     <Image 
+                     src="/icone/gain-temps.png" 
+                     alt="Gain de temps" 
+                     width={48}
+                     height={48}
+                     className="w-12 h-12 object-contain"
+                   />
                   )}
                   {key === 'cost_control' && (
-                    <svg className="w-12 h-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <circle cx="12" cy="8" r="7"></circle>
-                      <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
-                    </svg>
+                    <Image 
+                     src="/icone/reduction-cout.png" 
+                     alt="Réduction de coût" 
+                     width={48}
+                     height={48}
+                     className="w-12 h-12 object-contain"
+                   />
                   )}
                   {key === 'expertise' && (
-                    <svg className="w-12 h-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <polygon points="14 2 18 6 7 17 3 17 3 13 14 2"></polygon>
-                      <line x1="3" y1="22" x2="21" y2="22"></line>
-                    </svg>
+                      <Image 
+                      src="/icone/expertise.png" 
+                      alt="Expertise" 
+                      width={48}
+                      height={48}
+                      className="w-12 h-12 object-contain"
+                    />
                   )}
                   {key === 'serenity' && (
-                    <svg className="w-12 h-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-                    </svg>
+                   <Image 
+                   src="/icone/calme.png" 
+                   alt="sérénité" 
+                   width={48}
+                   height={48}
+                   className="w-12 h-12 object-contain"
+                 />
                   )}
                   {key === 'scalability' && (
-                    <svg className="w-12 h-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
-                    </svg>
+                   <Image 
+                   src="/icone/evolutivite.png" 
+                   alt="Evolutivité" 
+                   width={48}
+                   height={48}
+                   className="w-12 h-12 object-contain"
+                 />
                   )}
                 </span>
                 <span className="font-semibold text-lg">{t(`sections.benefits.items.${key}.title`)}</span>

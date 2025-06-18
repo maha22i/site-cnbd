@@ -1,0 +1,19 @@
+{
+  "buildDate": "2025-06-17T22:22:34.401Z",
+  "structure": {
+    "defaultLanguage": "fr",
+    "availableLanguages": [
+      "fr",
+      "en"
+    ],
+    "paths": {
+      "french": "/",
+      "english": "/en/"
+    }
+  },
+  "optimization": {
+    "staticExport": true,
+    "i18nStructure": "root-french-prefixed-english",
+    "seoOptimized": true
+  }
+}

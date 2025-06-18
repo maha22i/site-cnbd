@@ -8,16 +8,27 @@ import Navbar from '../../components/navigation/Navbar';
 import Footer from '../../components/navigation/Footer';
 import BackToTopButton from '../../components/BackToTopButton';
 import WhatsAppButton from '../../components/WhatsAppButton';
+import GoogleAnalytics from '../../components/seo/GoogleAnalytics';
+import { OrganizationSchema, LocalBusinessSchema } from '../../components/seo/SchemaMarkup';
 import { locales } from '../../i18n/config';
+import { generatePageSEO } from '../../lib/seo';
 import 'aos/dist/aos.css';
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+const inter = Inter({ 
+  subsets: ['latin'], 
+  variable: '--font-inter',
+  display: 'swap', // Optimisation pour le chargement des polices
+  preload: true
+});
 
-export const metadata: Metadata = {
-  title: 'CNBD - Distributeur de solutions informatiques pour entreprises',
-  description: 'CNBD est spécialisé dans le commerce de gros d\'ordinateurs, d\'équipements informatiques périphériques et de logiciels pour les entreprises.',
-  keywords: 'informatique, entreprise, ordinateurs, équipements informatiques, logiciels, Canon, partenaire officiel',
-};
+// Métadonnées générées dynamiquement par page
+export async function generateMetadata({ 
+  params: { locale } 
+}: { 
+  params: { locale: string } 
+}): Promise<Metadata> {
+  return generatePageSEO.home(locale);
+}
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -42,17 +53,145 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} suppressHydrationWarning>
-      <body className={`${inter.variable} font-sans min-h-screen`}>
+    <html 
+      lang={locale} 
+      suppressHydrationWarning
+      className="scroll-smooth" // Smooth scrolling
+    >
+      <head>
+        {/* Preload critical resources */}
+        <link 
+          rel="preload" 
+          href="/logo-cnbd.png" 
+          as="image" 
+          type="image/png"
+          fetchPriority="high"
+        />
+        <link 
+          rel="preload" 
+          href="/france.png" 
+          as="image" 
+          type="image/png"
+        />
+        <link 
+          rel="preload" 
+          href="/anglais.png" 
+          as="image" 
+          type="image/png"
+        />
+        
+        {/* DNS Prefetch pour améliorer les performances */}
+        <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="//www.google-analytics.com" />
+        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+        
+        {/* Preconnect pour les ressources critiques */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="" />
+        
+        {/* Optimisations pour mobile */}
+        <meta name="format-detection" content="telephone=yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="CNBD" />
+        
+        {/* Thème couleur pour le navigateur mobile */}
+        <meta name="theme-color" content="#dc2626" />
+        <meta name="msapplication-TileColor" content="#dc2626" />
+        
+        {/* Optimisations pour les moteurs de recherche */}
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        
+        {/* Links canoniques et alternates pour SEO multilingue */}
+        <link 
+          rel="canonical" 
+          href={locale === 'fr' ? 'https://cnbd.fr/' : 'https://cnbd.fr/en/'} 
+        />
+        <link 
+          rel="alternate" 
+          hrefLang="fr" 
+          href="https://cnbd.fr/" 
+        />
+        <link 
+          rel="alternate" 
+          hrefLang="en" 
+          href="https://cnbd.fr/en/" 
+        />
+        <link 
+          rel="alternate" 
+          hrefLang="x-default" 
+          href="https://cnbd.fr/" 
+        />
+
+        {/* Schema Markup JSON-LD */}
+        <OrganizationSchema locale={locale} />
+        <LocalBusinessSchema locale={locale} />
+      </head>
+      
+      <body className={`${inter.variable} font-sans min-h-screen antialiased`}>
+        {/* Google Analytics */}
+        <GoogleAnalytics 
+          gaId={process.env.NEXT_PUBLIC_GA_ID}
+          gtmId={process.env.NEXT_PUBLIC_GTM_ID}
+          debug={process.env.NODE_ENV === 'development'}
+        />
+        
         <NextIntlClientProvider locale={locale} messages={messages}>
+          {/* Skip to main content pour l'accessibilité */}
+          <a 
+            href="#main-content" 
+            className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cnbd-red text-white px-4 py-2 rounded-md z-50"
+          >
+            {locale === 'fr' ? 'Aller au contenu principal' : 'Skip to main content'}
+          </a>
+          
           <Navbar />
-          <main className="pt-20">
+          
+          <main 
+            id="main-content" 
+            className="pt-20"
+            role="main"
+          >
             {children}
           </main>
+          
           <Footer />
           <BackToTopButton />
           <WhatsAppButton />
         </NextIntlClientProvider>
+
+        {/* Script pour améliorer le Core Web Vitals */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              // Optimisation du CLS (Cumulative Layout Shift)
+              if ('loading' in HTMLImageElement.prototype) {
+                const images = document.querySelectorAll('img[loading="lazy"]');
+                images.forEach(img => {
+                  img.src = img.src;
+                });
+              }
+              
+              // Optimisation du LCP (Largest Contentful Paint)
+              const observer = new PerformanceObserver((list) => {
+                for (const entry of list.getEntries()) {
+                  if (entry.entryType === 'largest-contentful-paint') {
+                    // Marquer le LCP
+                    if (window.gtag) {
+                      window.gtag('event', 'timing_complete', {
+                        name: 'LCP',
+                        value: Math.round(entry.startTime)
+                      });
+                    }
+                  }
+                }
+              });
+              observer.observe({entryTypes: ['largest-contentful-paint']});
+            `
+          }}
+        />
       </body>
     </html>
   );

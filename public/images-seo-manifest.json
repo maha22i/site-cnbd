@@ -1,0 +1,103 @@
+{
+  "generateDate": "2025-06-17T22:22:57.516Z",
+  "requiredImages": {
+    "og-image-home.jpg": {
+      "width": 1200,
+      "height": 630,
+      "description": "Image Open Graph page d'accueil"
+    },
+    "og-image-services.jpg": {
+      "width": 1200,
+      "height": 630,
+      "description": "Image Open Graph services"
+    },
+    "og-image-solutions.jpg": {
+      "width": 1200,
+      "height": 630,
+      "description": "Image Open Graph solutions"
+    },
+    "og-image-contact.jpg": {
+      "width": 1200,
+      "height": 630,
+      "description": "Image Open Graph contact"
+    },
+    "twitter-card-home.jpg": {
+      "width": 1200,
+      "height": 600,
+      "description": "Twitter Card page d'accueil"
+    },
+    "favicon.ico": {
+      "width": 32,
+      "height": 32,
+      "description": "Favicon standard"
+    },
+    "favicon-16x16.png": {
+      "width": 16,
+      "height": 16,
+      "description": "Favicon 16x16"
+    },
+    "favicon-32x32.png": {
+      "width": 32,
+      "height": 32,
+      "description": "Favicon 32x32"
+    },
+    "apple-touch-icon.png": {
+      "width": 180,
+      "height": 180,
+      "description": "Apple Touch Icon"
+    },
+    "android-chrome-192x192.png": {
+      "width": 192,
+      "height": 192,
+      "description": "Android Chrome 192"
+    },
+    "android-chrome-512x512.png": {
+      "width": 512,
+      "height": 512,
+      "description": "Android Chrome 512"
+    },
+    "logo-cnbd-og.png": {
+      "width": 1200,
+      "height": 630,
+      "description": "Logo CNBD pour Open Graph"
+    },
+    "logo-cnbd-square.png": {
+      "width": 400,
+      "height": 400,
+      "description": "Logo CNBD carré"
+    }
+  },
+  "recommendations": [
+    "Toutes les images doivent être optimisées (WebP recommandé)",
+    "Les images Open Graph doivent faire exactement 1200x630px",
+    "Utiliser des images de haute qualité pour un meilleur SEO",
+    "Compresser les images sans perte de qualité",
+    "Ajouter des alt text descriptifs à toutes les images"
+  ],
+  "seoGuidelines": {
+    "openGraph": {
+      "dimensions": "1200x630px",
+      "format": "JPG ou PNG",
+      "maxSize": "8MB (recommandé: <1MB)",
+      "purpose": "Partage sur réseaux sociaux"
+    },
+    "favicon": {
+      "formats": [
+        "ICO",
+        "PNG"
+      ],
+      "sizes": [
+        "16x16",
+        "32x32",
+        "48x48",
+        "180x180"
+      ],
+      "purpose": "Identification du site dans les navigateurs"
+    },
+    "twitter": {
+      "dimensions": "1200x600px",
+      "format": "JPG ou PNG",
+      "purpose": "Twitter Cards"
+    }
+  }
+}

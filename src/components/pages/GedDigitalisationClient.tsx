@@ -116,11 +116,14 @@ export default function GedDigitalisationClient() {
                 
                 <div className="absolute -left-10 bottom-20 bg-white rounded-2xl shadow-xl p-5 backdrop-blur border border-gray-100 hover:shadow-2xl transition-all duration-300">
                   <div className="flex items-center gap-4">
-                    <div className="bg-gradient-to-br from-cnbd-red/20 to-cnbd-red/5 p-3 rounded-xl shadow-inner">
-                      <svg className="w-12 h-12 text-cnbd-red" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <polyline points="12,6 12,12 16,14"></polyline>
-                      </svg>
+                  <div className="bg-gradient-to-br from-cnbd-red/20 to-cnbd-red/5 p-3 rounded-xl shadow-inner">
+                      <Image 
+                        src="/icone/gain-temps.png" 
+                        alt="Numériser document" 
+                        width={48}
+                        height={48}
+                        className="w-12 h-12 object-contain"
+                      />
                     </div>
                     <div>
                       <div className="font-bold text-lg text-cnbd-black">{t('badges.time.title')}</div>

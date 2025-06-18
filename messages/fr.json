@@ -754,6 +754,30 @@
       "description": "Chez CNBD, nous comprenons que chaque entreprise a des besoins uniques. C'est pourquoi nous proposons des solutions sur-mesure qui s'adaptent parfaitement à votre activité et à vos objectifs de croissance.",
       "cta": "Parlons de votre projet"
     },
+    "centrale_canon": {
+      "title": "La Centrale Canon",
+      "subtitle": "à votre disposition",
+      "description": {
+        "part1": "Des",
+        "highlighted": "équipements Canon professionnels",
+        "part2": "de dernière génération pour tous vos projets bureautiques et solutions de gestion électronique de documents en lien avec la dématérialisation de la facturation."
+      },
+      "cards": {
+        "premium": {
+          "title": "Équipements Premium",
+          "description": "Matériel Canon professionnel de qualité supérieure"
+        },
+        "access": {
+          "title": "Accès Rapide",
+          "description": "Disponibilité flexible selon vos besoins"
+        },
+        "support": {
+          "title": "Support Expert",
+          "description": "Accompagnement technique professionnel"
+        }
+      },
+      "cta": "Découvrir la Centrale Canon"
+    },
     "cta": {
       "title": "Prêt à moderniser votre infrastructure informatique?",
       "description": "Contactez-nous dès aujourd'hui pour discuter de vos besoins spécifiques et découvrir comment nos solutions peuvent aider votre entreprise."

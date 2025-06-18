@@ -7,7 +7,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
 
   // Valider la locale
   if (!locale || !locales.includes(locale as any)) {
-    console.warn(`Locale ${locale} not supported, falling back to ${defaultLocale}`);
+    //console.warn(`Locale ${locale} not supported, falling back to ${defaultLocale}`);
     locale = defaultLocale;
   }
   
@@ -15,7 +15,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
   try {
     messages = (await import(`../../messages/${locale}.json`)).default;
   } catch (error) {
-    console.error(`Failed to load messages for locale: ${locale}`, error);
+   // console.error(`Failed to load messages for locale: ${locale}`, error);
     // Fallback vers la locale par défaut si le fichier n'existe pas
     // Ensure we use the potentially updated locale here
     messages = (await import(`../../messages/${locale}.json`)).default;

@@ -1,0 +1,218 @@
+{
+  "date": "2025-06-17T22:22:46.789Z",
+  "score": 90,
+  "total": 40,
+  "results": {
+    "successes": [
+      {
+        "message": "Dossier out/ trouvé",
+        "details": "",
+        "timestamp": "2025-06-17T22:22:46.766Z"
+      },
+      {
+        "message": "sitemap.xml présent",
+        "details": "",
+        "timestamp": "2025-06-17T22:22:46.766Z"
+      },
+      {
+        "message": "robots.txt présent",
+        "details": "",
+        "timestamp": "2025-06-17T22:22:46.767Z"
+      },
+      {
+        "message": "index.html présent",
+        "details": "",
+        "timestamp": "2025-06-17T22:22:46.767Z"
+      },
+      {
+        "message": "build-manifest.json présent",
+        "details": "",
+        "timestamp": "2025-06-17T22:22:46.767Z"
+      },
+      {
+        "message": "Sitemap XML valide",
+        "details": "",
+        "timestamp": "2025-06-17T22:22:46.768Z"
+      },
+      {
+        "message": "36 URLs trouvées dans le sitemap",
+        "details": "",
+        "timestamp": "2025-06-17T22:22:46.769Z"
+      },
+      {
+        "message": "Attributs hreflang présents (bon pour i18n)",
+        "details": "",
+        "timestamp": "2025-06-17T22:22:46.769Z"
+      },
+      {
+        "message": "Référence au sitemap présente",
+        "details": "",
+        "timestamp": "2025-06-17T22:22:46.770Z"
+      },
+      {
+        "message": "Autorisation d'indexation présente",
+        "details": "",
+        "timestamp": "2025-06-17T22:22:46.771Z"
+      },
+      {
+        "message": "Title présent (Accueil FR)",
+        "details": "",
+        "timestamp": "2025-06-17T22:22:46.773Z"
+      },
+      {
+        "message": "Description présent (Accueil FR)",
+        "details": "",
+        "timestamp": "2025-06-17T22:22:46.773Z"
+      },
+      {
+        "message": "Keywords présent (Accueil FR)",
+        "details": "",
+        "timestamp": "2025-06-17T22:22:46.773Z"
+      },
+      {
+        "message": "Open Graph Title présent (Accueil FR)",
+        "details": "",
+        "timestamp": "2025-06-17T22:22:46.774Z"
+      },
+      {
+        "message": "Open Graph Description présent (Accueil FR)",
+        "details": "",
+        "timestamp": "2025-06-17T22:22:46.774Z"
+      },
+      {
+        "message": "Open Graph Image présent (Accueil FR)",
+        "details": "",
+        "timestamp": "2025-06-17T22:22:46.774Z"
+      },
+      {
+        "message": "Twitter Card présent (Accueil FR)",
+        "details": "",
+        "timestamp": "2025-06-17T22:22:46.775Z"
+      },
+      {
+        "message": "Canonical URL présent (Accueil FR)",
+        "details": "",
+        "timestamp": "2025-06-17T22:22:46.775Z"
+      },
+      {
+        "message": "Schema markup présent (Accueil FR)",
+        "details": "",
+        "timestamp": "2025-06-17T22:22:46.776Z"
+      },
+      {
+        "message": "Title présent (Accueil EN)",
+        "details": "",
+        "timestamp": "2025-06-17T22:22:46.778Z"
+      },
+      {
+        "message": "Description présent (Accueil EN)",
+        "details": "",
+        "timestamp": "2025-06-17T22:22:46.779Z"
+      },
+      {
+        "message": "Keywords présent (Accueil EN)",
+        "details": "",
+        "timestamp": "2025-06-17T22:22:46.779Z"
+      },
+      {
+        "message": "Open Graph Title présent (Accueil EN)",
+        "details": "",
+        "timestamp": "2025-06-17T22:22:46.779Z"
+      },
+      {
+        "message": "Open Graph Description présent (Accueil EN)",
+        "details": "",
+        "timestamp": "2025-06-17T22:22:46.780Z"
+      },
+      {
+        "message": "Open Graph Image présent (Accueil EN)",
+        "details": "",
+        "timestamp": "2025-06-17T22:22:46.780Z"
+      },
+      {
+        "message": "Twitter Card présent (Accueil EN)",
+        "details": "",
+        "timestamp": "2025-06-17T22:22:46.780Z"
+      },
+      {
+        "message": "Canonical URL présent (Accueil EN)",
+        "details": "",
+        "timestamp": "2025-06-17T22:22:46.781Z"
+      },
+      {
+        "message": "Schema markup présent (Accueil EN)",
+        "details": "",
+        "timestamp": "2025-06-17T22:22:46.781Z"
+      },
+      {
+        "message": "Image logo-cnbd.png présente",
+        "details": "",
+        "timestamp": "2025-06-17T22:22:46.782Z"
+      },
+      {
+        "message": "Image favicon.ico présente",
+        "details": "",
+        "timestamp": "2025-06-17T22:22:46.782Z"
+      },
+      {
+        "message": "Image france.png présente",
+        "details": "",
+        "timestamp": "2025-06-17T22:22:46.782Z"
+      },
+      {
+        "message": "Image anglais.png présente",
+        "details": "",
+        "timestamp": "2025-06-17T22:22:46.782Z"
+      },
+      {
+        "message": "Ressources préchargées",
+        "details": "",
+        "timestamp": "2025-06-17T22:22:46.787Z"
+      },
+      {
+        "message": "DNS Prefetch activé",
+        "details": "",
+        "timestamp": "2025-06-17T22:22:46.787Z"
+      },
+      {
+        "message": "Lazy loading images",
+        "details": "",
+        "timestamp": "2025-06-17T22:22:46.787Z"
+      },
+      {
+        "message": "Scripts optimisés",
+        "details": "",
+        "timestamp": "2025-06-17T22:22:46.787Z"
+      }
+    ],
+    "warnings": [
+      {
+        "message": "Directive User-agent globale manquante",
+        "details": "",
+        "timestamp": "2025-06-17T22:22:46.770Z"
+      },
+      {
+        "message": "Image OG images/og-image-home.jpg manquante",
+        "details": "Créez ces images pour améliorer le partage sur les réseaux sociaux",
+        "timestamp": "2025-06-17T22:22:46.783Z"
+      },
+      {
+        "message": "Image OG images/og-image-services.jpg manquante",
+        "details": "Créez ces images pour améliorer le partage sur les réseaux sociaux",
+        "timestamp": "2025-06-17T22:22:46.784Z"
+      },
+      {
+        "message": "Image OG images/og-image-solutions.jpg manquante",
+        "details": "Créez ces images pour améliorer le partage sur les réseaux sociaux",
+        "timestamp": "2025-06-17T22:22:46.784Z"
+      }
+    ],
+    "errors": []
+  },
+  "recommendations": [
+    "Configurer Google Search Console et soumettre le sitemap",
+    "Créer les images Open Graph manquantes",
+    "Tester régulièrement avec Lighthouse et PageSpeed Insights",
+    "Surveiller les Core Web Vitals"
+  ]
+}

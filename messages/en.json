@@ -735,6 +735,30 @@
       "description": "At CNBD, we understand that every business has unique needs. That's why we offer tailor-made solutions that perfectly adapt to your activity and growth objectives.",
       "cta": "Let's talk about your project"
     },
+    "centrale_canon": {
+      "title": "The Canon Center",
+      "subtitle": "at your disposal",
+      "description": {
+        "part1": "",
+        "highlighted": "Latest generation professional Canon equipment",
+        "part2": "for all your office projects and electronic document management solutions related to invoice dematerialization."
+      },
+      "cards": {
+        "premium": {
+          "title": "Premium Equipment",
+          "description": "High-quality professional Canon equipment"
+        },
+        "access": {
+          "title": "Quick Access",
+          "description": "Flexible availability according to your needs"
+        },
+        "support": {
+          "title": "Expert Support",
+          "description": "Professional technical assistance"
+        }
+      },
+      "cta": "Discover the Canon Center"
+    },
     "cta": {
       "title": "Ready to modernize your IT infrastructure?",
       "description": "Contact us today to discuss your specific needs and discover how our solutions can help your business."

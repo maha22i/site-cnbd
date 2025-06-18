@@ -1,0 +1,48 @@
+User-Agent: *
+Allow: /
+Allow: /en/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+Disallow: /*.json$
+Disallow: /build-manifest.json
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /.env*
+Disallow: /package*.json
+Disallow: /tsconfig.json
+Disallow: /next.config.js
+Disallow: /tailwind.config.js
+Disallow: /postcss.config.js
+Disallow: /*.log
+Disallow: /temp/
+Disallow: /cache/
+Disallow: /*?*utm_*
+Disallow: /*?*fbclid*
+Disallow: /*?*gclid*
+
+User-Agent: Googlebot
+Allow: /
+Allow: /en/
+Disallow: /api/
+Disallow: /_next/static/chunks/
+Disallow: /build-manifest.json
+
+User-Agent: Bingbot
+Allow: /
+Allow: /en/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /build-manifest.json
+
+User-Agent: AhrefsBot
+User-Agent: SemrushBot
+User-Agent: MJ12bot
+User-Agent: DotBot
+User-Agent: AspiegelBot
+User-Agent: SurveyBot
+User-Agent: DataForSeoBot
+Disallow: /
+
+Host: https://cnbd.fr
+Sitemap: https://cnbd.fr/sitemap.xml
